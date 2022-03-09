@@ -1,1 +1,44 @@
-<p>login works!</p>
+
+    <h1>login</h1>
+    <div class="container">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="input">
+                <div class="label">username</div>
+                <input 
+                    type="text"
+                    placeholder="username or email"
+                    [formControlName]="'username'"
+                >
+            </div>
+            <div class="input">
+                <div class="label">password</div>
+                <input 
+                    type="text"
+                    placeholder="at least 4 digits"
+                    [formControlName]="'password'"
+                >
+            </div>
+            <div class="submit">
+                <button 
+                    type="submit"
+                >
+                    submit
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <!-- <form 
+        [formGroup]="formGroup" 
+        (ngSubmit)="onSubmit()"
+    >
+        <div class="input">
+            <div class="label">Username</div>
+            <input 
+                type="text"
+                placeholder="username or email"
+                [formControlName="'username'"]
+            >
+        </div>
+
+    </form> -->

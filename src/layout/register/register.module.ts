@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
@@ -9,7 +11,10 @@ import { RegisterComponent } from './register.component';
     RegisterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild([{path: 'register', component: RegisterComponent}])
   ]
 })
 export class RegisterModule { }

@@ -7,3 +7,13 @@ export interface Item {
     inStock: boolean;
     imgUrl: string;
 }
+
+export interface User {
+    id: number;
+    username: string;
+    password: string;
+    fullName: string;
+    email: string;
+    phone: number;
+
+}
