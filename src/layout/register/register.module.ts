@@ -15,6 +15,9 @@ import { RegisterComponent } from './register.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild([{path: 'register', component: RegisterComponent}])
+  ],
+  exports:[
+    RegisterComponent
   ]
 })
 export class RegisterModule { }

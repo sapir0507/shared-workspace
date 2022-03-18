@@ -15,14 +15,14 @@ export class LoginComponent implements OnInit {
     password: new FormControl(undefined, Validators.compose([Validators.required, Validators.minLength(4)]))
   })
 
-  user: User = {
-    id: 0,
-    username: '',
-    password: '',
-    email: '',
-    phone: 0,
-    fullName: ''
-  }
+  // user: User = {
+  //   id: 0,
+  //   username: '',
+  //   password: '',
+  //   email: '',
+  //   phone: 0,
+  //   fullName: ''
+  // }
 
   constructor(private state:SerivceService) { }
 
@@ -30,9 +30,26 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
+    let isUser: boolean = false;
     console.log(this.formGroup.value)
     if(this.formGroup.valid){
-      //go to server
+      this.state.allUsers.forEach(element => {
+        if(element.username === this.formGroup.value.username)
+        {
+          if(element.password === this.formGroup.value.password)
+          {
+            isUser = true;
+          }
+        }
+      });
+
+      if(isUser){
+        console.log("logged in")
+      }
+      else{
+        console.log("failed to login")
+      }
+   
     }
     else{
       console.error('Form is not Valid')

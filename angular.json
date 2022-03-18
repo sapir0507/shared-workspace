@@ -99,8 +99,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/styles/fonts",
+              "src/assets/styles/global",
+              "src/assets/styles/media",
+              "src/assets/styles/mixin"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles" 
+              ]
+            },
             "scripts": []
           }
         }

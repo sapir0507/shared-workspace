@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { User } from '../app.interface';
-import { User } from 'src/interface/app.interface'
+import { User } from '../app.interface';
 
 const USERS:User[] = [
   {
